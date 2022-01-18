@@ -19,9 +19,7 @@
   ],
   "main": "lib/main.js",
   "typings": "lib/main.d.ts",
-  "bin": {
-    "nativefier": "lib/cli.js"
-  },
+  "bin": "lib/cli.js",
   "homepage": "https://github.com/nativefier/nativefier",
   "repository": {
     "type": "git",
