@@ -2,17 +2,17 @@
 .DS_Store
 
 # ignore compiled lib files
-lib*
-app/lib/*
-app/dist/*
-built-tests
+# lib*
+# app/lib/*
+# app/dist/*
+# built-tests
 
 # commit a placeholder to keep the app/lib directory
 !app/lib/.placeholder
 
-dist
-package-lock.json
-app/package-lock.json
+# dist
+# package-lock.json
+# app/package-lock.json
 
 # Logs
 logs

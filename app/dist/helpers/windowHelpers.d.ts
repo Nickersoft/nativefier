@@ -1,0 +1,24 @@
+import { BrowserWindow, BrowserWindowConstructorOptions, Event, MessageBoxReturnValue } from 'electron';
+import { TrayValue, WindowOptions } from '../../../shared/src/options/model';
+export declare function adjustWindowZoom(adjustment: number): void;
+export declare function blockExternalURL(url: string): Promise<MessageBoxReturnValue>;
+export declare function clearAppData(window: BrowserWindow): Promise<void>;
+export declare function clearCache(window: BrowserWindow): Promise<void>;
+export declare function createAboutBlankWindow(options: WindowOptions, setupWindow: (options: WindowOptions, window: BrowserWindow) => void, parent?: BrowserWindow): BrowserWindow;
+export declare function createNewTab(options: WindowOptions, setupWindow: (options: WindowOptions, window: BrowserWindow) => void, url: string, foreground: boolean, parent?: BrowserWindow): BrowserWindow | undefined;
+export declare function createNewWindow(options: WindowOptions, setupWindow: (options: WindowOptions, window: BrowserWindow) => void, url: string, parent?: BrowserWindow): BrowserWindow;
+export declare function getCurrentURL(): string;
+export declare function getDefaultWindowOptions(options: WindowOptions): BrowserWindowConstructorOptions;
+export declare function goBack(): void;
+export declare function goForward(): void;
+export declare function goToURL(url: string): Promise<void> | undefined;
+export declare function hideWindow(window: BrowserWindow, event: Event, fastQuit: boolean, tray: TrayValue): void;
+export declare function injectCSS(browserWindow: BrowserWindow): void;
+export declare function sendParamsOnDidFinishLoad(options: WindowOptions, window: BrowserWindow): void;
+export declare function setProxyRules(window: BrowserWindow, proxyRules?: string): void;
+export declare function withFocusedWindow<T>(block: (window: BrowserWindow) => T): T | undefined;
+export declare function zoomOut(): void;
+export declare function zoomReset(options: {
+    zoom?: number;
+}): void;
+export declare function zoomIn(): void;
